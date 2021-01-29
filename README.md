@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# TypeScript NewAPI demo
+
+> https://newsapi.org/docs/get-started 
+
+for education purposes and fun.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
