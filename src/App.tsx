@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { URL } from './config';
 import './App.css';
 
-const API_KEY: string = '4bf001f99d6d424a9b3e683d28593d31';
-const COUNTRY: string = 'no';
-const URL: string = `http://newsapi.org/v2/top-headlines?country=${COUNTRY}&apiKey=${API_KEY}`;
-
 function App() {
-
   interface InewsItemProps {
-    author: (string|null);
+    author: (string | null);
     content: string;
     description: string;
     publishedAt: string;
@@ -17,7 +13,7 @@ function App() {
     url: string;
     urlToImage: string;
   }
-  
+
   const [news, setNews] = useState<InewsItemProps[]>([]);
 
   useEffect(() => {
@@ -34,14 +30,17 @@ function App() {
   if (news) {
     return (
       <div className="App">
+        {/* 
+          <Article title={}, url_to_image={}, author={}, description={} />
+        */}
         {
           news.map((newsItem: InewsItemProps, index: number) => {
             return (
               <div key={index}>
-                <h1>{ newsItem.title }</h1>
-                <img src={newsItem.urlToImage} alt={newsItem.urlToImage} />
-                <span>{ newsItem.author}</span>
-                <p>{ newsItem.description }</p>
+                <h1>{newsItem.title}</h1>
+                <img src={newsItem.urlToImage} alt={newsItem.title} />
+                <span>{newsItem.author}</span>
+                <p>{newsItem.description}</p>
               </div>
             )
           })
