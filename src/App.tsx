@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { URL } from './config';
+import Article from './components/Article';
 import './App.css';
 
 function App() {
-  interface InewsItemProps {
-    author: (string | null);
-    content: string;
-    description: string;
-    publishedAt: string;
-    source: object;
-    title: string;
-    url: string;
-    urlToImage: string;
-  }
 
   const [news, setNews] = useState<InewsItemProps[]>([]);
 
@@ -30,18 +21,13 @@ function App() {
   if (news) {
     return (
       <div className="App">
-        {/* 
-          <Article title={}, url_to_image={}, author={}, description={} />
-        */}
         {
           news.map((newsItem: InewsItemProps, index: number) => {
             return (
-              <div key={index}>
-                <h1>{newsItem.title}</h1>
-                <img src={newsItem.urlToImage} alt={newsItem.title} />
-                <span>{newsItem.author}</span>
-                <p>{newsItem.description}</p>
-              </div>
+              <Article
+                key={index}
+                {...newsItem}
+              />
             )
           })
         }
