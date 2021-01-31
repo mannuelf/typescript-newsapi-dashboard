@@ -7,7 +7,7 @@ type PublishedAtProps = {
 export default function PublishedAt({ time }: PublishedAtProps) { // you can do inline default export like this.
   return (
     <div className="font-normal text-gray-500">
-      <Moment format="YYYY/MM/DD">
+      <Moment format="ddd - MMM YYYY">
         {time}
       </Moment>
     </div>

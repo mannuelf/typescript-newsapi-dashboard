@@ -6,10 +6,10 @@ import Blurb from './Blurb';
 
 function Article({ title, author, description, publishedAt, urlToImage }: IArticleCardProps) {
   return (
-    <div>
+    <div className="bg-white p-4">
+      <Image src={urlToImage} alt={title} />
       <Heading content={title} />
       <PublishedAt time={publishedAt} />
-      <Image src={urlToImage} alt={title} />
       <Author content={author} />
       <Blurb content={description} />
     </div>
