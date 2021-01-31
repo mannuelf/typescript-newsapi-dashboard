@@ -1,8 +1,12 @@
 # TypeScript NewAPI demo
 
-> A typescript version of react card component, showing a wall of news headlines.
+> A wall of news headlines in react and typescript.
 
 For education purposes and fun.
+
+What it looks like:
+
+<img src="./.readme/cover.png" width="100%">
 
 Grab an API key from  [www.newsapi.org](https://newsapi.org/docs/get-started) and put in your .env file in your root directory.
 
