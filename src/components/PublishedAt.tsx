@@ -4,7 +4,7 @@ type Props = {
 
 export default function PublishedAt(time: Props) { // you can do inline default export like this.
   return (
-    <div>
+    <div className="font-normal text-gray-500">
       {time.time}
     </div>
   )

@@ -5,7 +5,9 @@ interface IImageProp {
 
 function Image(image: IImageProp) {
   return (
-    <img src={image.src} alt={image.alt} />
+    <div className="text-gray-900">
+      <img src={image.src} alt={image.alt} />
+    </div>
   )
 }
 

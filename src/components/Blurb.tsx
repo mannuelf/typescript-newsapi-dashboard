@@ -4,7 +4,7 @@ interface IBlurb {
 
 export default function Blurb(content: IBlurb) {
   return (
-    <div>
+    <div className="text-gray-800">
       {content.content}
     </div>
   )

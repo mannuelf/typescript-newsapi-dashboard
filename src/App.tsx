@@ -18,7 +18,7 @@ function App() {
 
   if (news) {
     return (
-      <div className="App">
+      <div className="grid grid-cols-3 gap-4">
         {
           news.map((newsItem: IArticleCardProps, index: number) => {
             return (
