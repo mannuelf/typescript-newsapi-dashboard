@@ -1,11 +1,15 @@
-type Props = {
+import Moment from 'react-moment';
+
+type PublishedAtProps = {
   time: string;
 }
 
-export default function PublishedAt(time: Props) { // you can do inline default export like this.
+export default function PublishedAt({ time }: PublishedAtProps) { // you can do inline default export like this.
   return (
     <div className="font-normal text-gray-500">
-      {time.time}
+      <Moment format="YYYY/MM/DD">
+        {time}
+      </Moment>
     </div>
   )
 }
