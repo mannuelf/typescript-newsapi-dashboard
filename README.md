@@ -16,6 +16,12 @@ Grab an API key from  [www.newsapi.org](https://newsapi.org/docs/get-started) an
 REACT_APP_API_KEY=abcdefghijklmnopqrstuvwxyz
 ```
 
+## npm install
+
+```bash
+npm install
+```
+
 read more: [www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
 
 ## Available Scripts
