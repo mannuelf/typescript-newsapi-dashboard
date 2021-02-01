@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { URL } from './config';
-import Article from './components/Article';
-import './App.css';
+import { useState, useEffect } from 'react';
+import { URL } from './config/config';
+import ArticleCard from './components/ArticleCard';
 
 function App() {
-
-  const [news, setNews] = useState<InewsItemProps[]>([]);
+  const [news, setNews] = useState<IArticleCardProps[]>([]);
 
   useEffect(() => {
     fetch(`${URL}`)
@@ -20,13 +18,13 @@ function App() {
 
   if (news) {
     return (
-      <div className="App">
+      <div className="grid grid-cols-3 gap-4 py-8 px-8">
         {
-          news.map((newsItem: InewsItemProps, index: number) => {
+          news.map((newsItem: IArticleCardProps, index: number) => {
             return (
-              <Article
+              <ArticleCard
                 key={index}
-                {...newsItem}
+                {...newsItem} // Destructured, as apposed to having a list props
               />
             )
           })
