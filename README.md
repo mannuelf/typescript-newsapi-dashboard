@@ -1,4 +1,4 @@
-# TypeScript NewAPI demo
+# TypeScript NewsAPI demo
 
 > A wall of news headlines in react and typescript.
 
