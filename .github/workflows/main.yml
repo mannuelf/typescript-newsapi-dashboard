@@ -17,7 +17,6 @@ jobs:                                # A workflow run is made up of one or more 
         with:
           node-version: 12
       - name: npm scripts            # Runs a set of commands using the runners shell
-        run: |
-          npm ci,
-          npm test
-          npm run build
+        run: npm ci
+        run: npm test
+        run: npm run build
