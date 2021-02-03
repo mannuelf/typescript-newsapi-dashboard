@@ -4,8 +4,6 @@ on:                                 # Controls when the action will run.
   pull_request:
     branches: [ main ]
 
-  workflow_dispatch:                 # Allows you to run this workflow manually from the Actions tab
-
 jobs:                                # A workflow run is made up of one or more jobs that can run sequentially or in parallel
   build:                             # This workflow contains a single job called "build"
     runs-on: ubuntu-latest           # Virtual machine, The type of runner that the job will run on
