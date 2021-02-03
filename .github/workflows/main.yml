@@ -1,8 +1,6 @@
 name: Node Continuos Integration
 
 on:                                 # Controls when the action will run.
-  push:                             # Triggers the workflow on push or pull request events but only for the main branch
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -10,13 +8,12 @@ on:                                 # Controls when the action will run.
 
 jobs:                                # A workflow run is made up of one or more jobs that can run sequentially or in parallel
   build:                             # This workflow contains a single job called "build"
-    runs-on: ubuntu-latest           # The type of runner that the job will run on
+    runs-on: ubuntu-latest           # Virtual machine, The type of runner that the job will run on
     steps:                           # Steps represent a sequence of tasks that will be executed as part of the job
       - uses: actions/checkout@v2    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: npm scripts            # Runs a set of commands using the runners shell
-        run: npm ci
-        run: npm test
-        run: npm run build
+      - run: npm ci                  # clean install on the CI server above
+      - run: npm test
+      - run: npm run build
