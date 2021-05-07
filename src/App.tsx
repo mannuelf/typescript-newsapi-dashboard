@@ -9,9 +9,9 @@ function App() {
     fetch(`${URL}`)
       .then((response) => response.json())
       .then((response) => {
-        setNews(response.articles)
+        setNews(response.articles);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }, []);
@@ -19,23 +19,19 @@ function App() {
   if (news) {
     return (
       <div className="grid grid-cols-3 gap-4 py-8 px-8">
-        {
-          news.map((newsItem: IArticleCardProps, index: number) => {
-            return (
-              <ArticleCard
-                key={index}
-                {...newsItem} // Destructured, as apposed to having a list props
-              />
-            )
-          })
-        }
+        {news.map((newsItem: IArticleCardProps, index: number) => {
+          return (
+            <ArticleCard
+              key={index}
+              {...newsItem} // Destructured, as apposed to having a list props
+            />
+          );
+        })}
       </div>
     );
   }
 
-  return (
-    <div className="App">No news for you sorry.</div>
-  )
+  return <div className="App">No news for you sorry.</div>;
 }
 
 export default App;

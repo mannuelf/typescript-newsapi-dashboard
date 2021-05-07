@@ -8,15 +8,29 @@ What it looks like:
 
 <img src="./.readme/cover.png" width="100%">
 
-Grab an API key from  [www.newsapi.org](https://newsapi.org/docs/get-started) and put in your .env file in your root directory.
+## How to start app
+
+1. sign and create an API key for yourself on newsapi.org
+2. create a `.env` file in the root of the project
+3. run `yarn` to install dependencies.
+
+Grab an API key from [www.newsapi.org](https://newsapi.org/docs/get-started) and put in your .env file in your root directory.
 
 ## .env
+
+Create .env in the root of your project.
 
 ```bash
 REACT_APP_API_KEY=abcdefghijklmnopqrstuvwxyz
 ```
 
-## npm install
+## yarn or npm install
+
+```bash
+yarn
+```
+
+OR
 
 ```bash
 npm install
@@ -24,25 +38,6 @@ npm install
 
 read more: [www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
 
-## Available Scripts
+### Built with Create React App
 
-### `yarn start`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser..
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+See the [documentation](https://facebook.github.io/create-react-app/) for more information.
