@@ -10,11 +10,11 @@ What it looks like:
 
 ## How to start app
 
-1. sign and create an API key for yourself on newsapi.org
+1. signup and create an API key for yourself on newsapi.org
 2. create a `.env` file in the root of the project
 3. run `yarn` to install dependencies.
 
-Grab an API key from [www.newsapi.org](https://newsapi.org/docs/get-started) and put in your .env file in your root directory.
+Grab an API key from [www.newsapi.org](https://newsapi.org/docs/get-started) and put in your `.env` file in your root directory.
 
 ## .env
 
@@ -34,6 +34,14 @@ OR
 
 ```bash
 npm install
+```
+
+## yarn start
+
+Check the pacakge.json file for all availabale scripts.
+
+```bash
+yarn start
 ```
 
 read more: [www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv)
