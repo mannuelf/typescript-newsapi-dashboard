@@ -18,16 +18,23 @@ function App() {
 
   if (news) {
     return (
-      <div className="grid grid-cols-3 gap-4 py-8 px-8">
-        {news.map((newsItem: IArticleCardProps, index: number) => {
-          return (
-            <ArticleCard
-              key={index}
-              {...newsItem} // Destructured, as apposed to having a list props
-            />
-          );
-        })}
-      </div>
+      <>
+        <header className="sticky top-0 z-40 lg:z-50 w-full max-w-8xl mx-auto bg-white flex-none flex">
+          <h1 className="text-3xl">Welcome to React news</h1>
+        </header>
+        <section className="container mx-auto">
+          <div className="grid grid-cols-3 gap-4 py-8 px-8">
+            {news.map((newsItem: IArticleCardProps, index: number) => {
+              return (
+                <ArticleCard
+                  key={index}
+                  {...newsItem} // Destructured, as apposed to having a list props
+                />
+              );
+            })}
+          </div>
+        </section>
+      </>
     );
   }
 
