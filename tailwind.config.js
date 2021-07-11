@@ -8,6 +8,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
 
 // https://tailwindcss.com/docs/guides/create-react-app
