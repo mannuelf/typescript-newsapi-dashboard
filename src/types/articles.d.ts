@@ -1,21 +1,7 @@
-interface IRootState {
-  searchQuery: string;
-  articles: IArticle[];
-}
-
 interface IResponse {
   articles: IArticle[];
   status: string;
   totalResults: number;
-}
-
-interface IArticleCardProps {
-  author: string | null;
-  description: string;
-  publishedAt: string;
-  title: string;
-  url: string;
-  urlToImage: string;
 }
 
 interface ISource {
