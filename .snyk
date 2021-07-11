@@ -1,0 +1,21 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-EJS-1049328:
+    - react-scripts > workbox-webpack-plugin > workbox-build > @surma/rollup-plugin-off-main-thread > ejs:
+        reason: No update available at the time
+        expires: '2021-08-10T05:28:46.054Z'
+  SNYK-JS-GLOBPARENT-1016905:
+    - parse-glob > glob-base > glob-parent:
+        reason: Cannot be upgraded
+        expires: '2021-08-10T05:28:46.054Z'
+  SNYK-JS-NODESASS-1059081:
+    - node-sass:
+        reason: no upgrade available at time
+        expires: '2021-08-10T05:28:46.054Z'
+  SNYK-JS-NODESASS-535498:
+    - node-sass:
+        reason: No upgrade available at time
+        expires: '2021-08-10T05:28:46.054Z'
+patch: {}
