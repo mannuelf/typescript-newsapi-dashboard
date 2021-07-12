@@ -1,8 +1,13 @@
 const initialState = {
   searchQuery: '',
-  articles: [],
+  allArticles: [],
 };
 
+/**
+ * @param {Object} state previous state
+ * @param {string} action current action being process
+ * @returns new state, never modifies the previous state.
+ */
 export function articlesReducer(state = initialState, action: any) {
   const { type, payload } = action;
   switch (type) {
@@ -26,3 +31,6 @@ export const searchArticles = (searchQuery: string) => ({
 });
 
 // thunks
+export function getAllArticles(searchQuery) {
+  return function (dispatch) {};
+}

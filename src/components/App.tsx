@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { URL } from '../config/config';
 import ArticleCard from './article-card/ArticleCard';
 import SearchForm from './SearchForm';
+import { getSearchQuery, getAllArticles } from 'store/reducers/articles';
 
 function App() {
   const [news, setNews] = useState<IArticle[]>([]);
+  const [searchQuery, getsearchQuery] = useSelector(getSearchQuery);
+  const [articles, getArticles] = useSelector(getAllArticles);
 
   useEffect(() => {
     fetch(`${URL}`)
@@ -24,7 +28,7 @@ function App() {
           <h1 className="text-3xl">Welcome to React news</h1>
         </header>
         <section className="container mx-auto">
-          <SearchForm searchQuery="usa" />
+          <SearchForm searchQuery={searchQuery} />
           <div className="grid grid-cols-3 gap-4 py-8 px-4">
             {news.map((newsItem: IArticle, index: number) => {
               return <ArticleCard key={index} {...newsItem} />;
@@ -35,7 +39,7 @@ function App() {
     );
   }
 
-  return <div className="App">No news for you sorry.</div>;
+  return <div className="container mx-auto">No news for you sorry.</div>;
 }
 
 export default App;
