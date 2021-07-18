@@ -3,15 +3,19 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import { store } from './store/store';
-import App from 'components/App';
+import { fetchArticles } from './store/reducers/ArticlesReducer';
+import App from 'components/app/App';
 
 import 'styles/tailwind.css';
 
+// kick start the app with default state
+store.dispatch(fetchArticles('tesla'));
+
 ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </React.StrictMode>
-  </Provider>,
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
