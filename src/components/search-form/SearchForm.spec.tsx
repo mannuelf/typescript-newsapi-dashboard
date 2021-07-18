@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import SearchForm from '../SearchForm';
+import SearchForm from './SearchForm';
 
 describe('Search form renders', () => {
   it('renders to screen', () => {
