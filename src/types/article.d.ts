@@ -19,3 +19,10 @@ interface IArticle {
   url: string;
   urlToImage: string;
 }
+
+interface INewsIoResponse {
+  status: string;
+  totalResults: number;
+  results: array;
+  nextPage: number;
+}
