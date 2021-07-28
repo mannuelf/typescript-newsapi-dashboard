@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "baseUrl": "./src",
+    "types": ["node"],
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": false,
     "skipLibCheck": true,
