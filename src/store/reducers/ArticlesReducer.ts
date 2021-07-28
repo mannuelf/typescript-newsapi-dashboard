@@ -1,10 +1,5 @@
 import { AnyAction } from 'redux';
-import {
-  API_BASE_URL,
-  API_END_POINT,
-  API_KEY,
-  API_VERSION,
-} from 'config/config';
+import { NEWS_API } from 'services/newsapi';
 import { RootState } from 'store/store';
 
 const initialState = {
@@ -33,13 +28,21 @@ export function fetchArticles(query = 'tesla') {
   return async (dispatch: any, getState: any): Promise<void> => {
     const state = getState();
     query = state.search.search;
-    console.log(`Fetching articles for ${query}`);
-
+    console.log(`fetchArticlesState ${query}`);
+    let count = 0;
     const response = await fetch(
-      `${API_BASE_URL}${API_VERSION}${API_END_POINT}?q=${query}&apiKey=${API_KEY}`
+      `${NEWS_API.BASE_URL}/${NEWS_API.VERSION}/${NEWS_API.END_POINT.everything}?q=${query}&apiKey=${NEWS_API.API_KEY}`
     )
-      .then((response) => response.json())
-      .catch((res) => console.error(`Server Error ${res.error.info}`))
+      .then((response) => {
+        count++;
+        console.log('fired: ', count);
+
+        return response.json();
+      })
+      .catch((res) => {
+        console.error(`Server Error ${res.error.info}`);
+        return [];
+      })
       .finally(() => console.log('finished'));
 
     dispatch({ type: ARTICLES_RECEIVED, payload: response });
