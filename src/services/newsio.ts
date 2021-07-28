@@ -4,7 +4,7 @@ export const newsIo = {
   VERSION: '/1',
   END_POINT: {
     latest: '/news',
-    archive: '/achive',
+    archive: '/archive',
     sources: '/sources',
   },
   COUNTRY: 'us',
