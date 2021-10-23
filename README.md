@@ -38,7 +38,7 @@ npm install
 
 ## yarn start
 
-Check the package.json file for all availabale scripts.
+Check the package.json file for all available scripts.
 
 ```bash
 yarn start
